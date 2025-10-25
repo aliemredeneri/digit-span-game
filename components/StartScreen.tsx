@@ -27,7 +27,7 @@ export function StartScreen() {
             <li>• Numbers will appear one at a time for 1 second each</li>
             <li>• Remember numbers that are LARGER than the previous number</li>
             <li>• Enter the remembered numbers in order</li>
-            <li>• You'll start with 4 numbers to remember</li>
+            <li>• You&apos;ll start with 4 numbers to remember</li>
             <li>• Complete 3 trials per level</li>
             <li>• Difficulty increases up to 10 numbers</li>
           </ul>

@@ -5,15 +5,14 @@ import { formatUserAnswer, formatCorrectAnswer } from '@/lib/sequenceGenerator'
 import { useEffect, useRef } from 'react'
 
 export function ResultScreen() {
-  const { 
-    userInput, 
-    toRemember, 
+  const {
+    userInput,
+    toRemember,
     currentTrial,
     currentLevel,
     incrementTrial,
     incrementScore,
     nextLevel,
-    resetTrials,
     setGameState,
     setUserInput
   } = useGameStore()
