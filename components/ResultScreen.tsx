@@ -29,7 +29,7 @@ export function ResultScreen() {
     }
 
     const timer = setTimeout(() => {
-      if (currentTrial >= 3) {
+      if (currentTrial >= 2) {
         if (currentLevel < 10) {
           nextLevel()
           resetTrials()
@@ -52,9 +52,9 @@ export function ResultScreen() {
       <div className="bg-white rounded-lg shadow-xl p-12 max-w-2xl w-full">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-gray-800 mb-2">
-            Practice {currentTrial} of 35
+            Trial {(currentLevel - 4) * 2 + currentTrial} of 14
           </h2>
-          <p className="text-gray-600">Level {currentLevel} - Remember {currentLevel} numbers</p>
+          <p className="text-gray-600">Level {currentLevel} - Trial {currentTrial}/2 - Remember {currentLevel} numbers</p>
         </div>
 
         <div className="space-y-6">

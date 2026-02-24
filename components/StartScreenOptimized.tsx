@@ -24,7 +24,7 @@ export function StartScreen() {
             <li>• Remember any number that is LARGER than the previous one</li>
             <li>• Enter all remembered numbers in the order shown</li>
             <li>• Example: 4-8-2-5 → Remember: 4-8-5</li>
-            <li>• Complete 3 trials per level (4 to 10 numbers)</li>
+            <li>• Complete 2 trials per level (4 to 10 numbers)</li>
           </ul>
         </div>
 

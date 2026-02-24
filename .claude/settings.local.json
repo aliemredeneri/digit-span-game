@@ -3,7 +3,8 @@
     "allow": [
       "Bash(npm run dev:*)",
       "Bash(timeout:*)",
-      "Bash(/dev/null)"
+      "Bash(/dev/null)",
+      "WebSearch"
     ],
     "deny": [],
     "ask": []

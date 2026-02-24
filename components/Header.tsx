@@ -4,7 +4,7 @@ import { useGameStore } from '@/store/gameStore'
 
 export function Header() {
   const { currentLevel, currentTrial, gameState } = useGameStore()
-  const totalTrialNumber = (currentLevel - 4) * 3 + currentTrial
+  const totalTrialNumber = (currentLevel - 4) * 2 + currentTrial
 
   const handleExit = () => {
     if (typeof window !== 'undefined') {
@@ -21,7 +21,7 @@ export function Header() {
       {gameState !== 'idle' && (
         <div className="flex items-center gap-6">
           <span className="text-white text-lg">
-            Practice {totalTrialNumber} of 21
+            Practice {totalTrialNumber} of 14
           </span>
           <button
             onClick={handleExit}

@@ -14,20 +14,20 @@ export function generateSequence(level: number): SequenceResult {
   const shown: number[] = []
   const remember: number[] = []
   
-  // Generate a diverse sequence of random numbers
+  // Generate a diverse sequence of random numbers (1-9, no zeros)
   for (let i = 0; i < totalNumbers; i++) {
     if (i === 0) {
-      // First number: random 0-9
-      const firstNum = Math.floor(Math.random() * 10)
+      // First number: random 1-9 (no zero)
+      const firstNum = Math.floor(Math.random() * 9) + 1
       shown.push(firstNum)
       remember.push(firstNum) // ALWAYS remember the first number
     } else {
-      // Generate a random number 0-9, ensuring it's different from the previous
+      // Generate a random number 1-9, ensuring it's different from the previous
       let newNum: number
-      
-      // NEVER allow the same number as the previous one
+
+      // NEVER allow zero or the same number as the previous one
       do {
-        newNum = Math.floor(Math.random() * 10)
+        newNum = Math.floor(Math.random() * 9) + 1
       } while (newNum === shown[shown.length - 1])
       
       shown.push(newNum)
@@ -63,7 +63,7 @@ export function formatCorrectAnswer(numbers: number[]): string {
 }
 
 export function calculateTimeLimit(level: number): number {
-  const baseTime = 8
+  const baseTime = 5
   const additionalTimePerNumber = 2
   return baseTime + (level - 4) * additionalTimePerNumber
 }

@@ -23,8 +23,8 @@ export function ResultScreen() {
   const isCorrect = userInput === toRemember.map(n => n.toString()).join('')
   
   // Calculate total trial number across all levels
-  const totalTrialNumber = (currentLevel - 4) * 3 + currentTrial
-  const totalTrials = 21 // 7 levels * 3 trials each
+  const totalTrialNumber = (currentLevel - 4) * 2 + currentTrial
+  const totalTrials = 14 // 7 levels * 2 trials each
 
   useEffect(() => {
     let mounted = true;
@@ -38,8 +38,8 @@ export function ResultScreen() {
       
       setUserInput('')
       
-      if (currentTrial >= 3) {
-        // Completed 3 trials for this level
+      if (currentTrial >= 2) {
+        // Completed 2 trials for this level
         if (currentLevel < 10) {
           // Move to next level
           nextLevel()
@@ -73,7 +73,7 @@ export function ResultScreen() {
             Trial {totalTrialNumber} of {totalTrials}
           </h2>
           <p className="text-gray-600">
-            Level {currentLevel} - Trial {currentTrial}/3 - Remember {currentLevel} numbers
+            Level {currentLevel} - Trial {currentTrial}/2 - Remember {currentLevel} numbers
           </p>
         </div>
 
